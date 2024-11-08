@@ -1,0 +1,1945 @@
+Python - Programming language
+Python is General Purpose & Higher Level Language.
+python --version
+
+Code -> byte-code(consider the code in byte) -> PVM(It's take the each byte and compile) -> 01 -> Linux (It's also enterpreten)
+
+Functions
+	Funtions are pre-difine function (print,type..).
+	Built in function(print)
+	Module level function(import math-<group>)
+	User define function
+
+Variables
+
+	RAM has Stack and Heap.
+	Heap -> values - class - refrence
+	RAM -> variable name 
+	Garbage Collector -> Delete the unwanted variable
+	Backend heap id
+		#id(varibale_name)
+
+	It's a case-sensetive (small and Capital alphabate not behavious same)
+	We cannot define number of starting variable.
+	We cannot use special character in from of variable except '_ '.
+	We cannot use variable which already exist as funtion and keywords(if,else) in python.
+	There is not limit for the varible and values.
+{
+#help()
+#modules
+#keywords 
+Enter to come out.
+}
+
+{
+Python ERROR
+	Syntax Error (If any line have a syntax whole program will not run)
+ 	Run Time Error (upto correct program will run, like name error)
+	Indentation Error
+}
+
+Number Type(int)
+	Decimal		=	Based 10 (0-9)		anynumber by default take in decimal
+	Binary		=	Based 2  (0-1)		a=0b1111 or a=0B1111
+	Octal		=	Based 8  (0-7)		a=01233  or a=0O1234
+	Hexadecimal	=	Based 16 (0-9 A-F)		a=0x12ac or a=0X12acb
+
+	By default the data print in decimal. or We can print according to our need.
+
+Data Type = 14 (a(Variable)=10(data or values))
+	
+	Whenever we give the number the python accept the number in decimal by default.
+	We no need the define the data type python will take auto the data type but not in C.
+	We can check the type of data using 'print(type(a)) or type(a).
+	Python data type id dynamic.
+	
+	=> int (integer) The plan number is called integer number like (1234456789)
+		#a=1
+		#print(a)
+		#print(type(a))
+		#a=0b1111 or a=0B1111
+		#a=0o1233  or a=0O1234
+		#a=0x12ac or a=0X12ac
+		#import sys
+		#sys.getsizeoff(a)
+		
+	=> float
+	Float won't accepts any number except float not even binary.
+		#a=100.70
+		#print(a)
+		#print(type(a))
+		#a=1.e5
+
+	=> Complex
+	Complex number need to to make electrical base application.
+	If root don't have reminder then it's a real number otherwise It's a imaginary number(under root -1)=i.
+	In python rather of i we call j or J as a imaginary number.		
+	Real + Imaginary = Complex Number.
+	Real number we can give any number like decimal, binary....
+	Imaginary we can give only in decimal.
+		#a=20+10j
+		#a=0o123+10j
+		#print(a)  real+imaginary
+		#print(a.real)	Only real
+		#print(a.imag) only imag
+
+	=> Bool
+	The output come in i word like true or false, yes or no, 0 or 1.
+	It should be F for False (0) and T for True (1).
+		#a=True
+		#a=False
+		#print(a)
+		#print(type(a))
+		#a=100
+		#b=200
+		#c=a>b
+		#print(c)
+ 		#a=(True-False)
+		#print(a)
+
+	=> Str (string)
+	We have to use ' or " or ''' or """ for string.
+	This is (Slice Operator)indexing method like Positive number start with 0 [1],[1:2]/ Negative number start with -1 [-1],[-1:-2].
+		#a='Vivek'
+		#a="Vivek"
+		#a='''Vivek
+			Gupta'''
+		#a="""Vivek
+			Gupta"""	
+		#a="""Vivek 'Gupta'"""
+		#a="Vivek 'Gupta'"
+		#print(a[1])
+		#print(a[-1])
+		#print(a[0:4])
+????????		#print(a[-1:-3])
+		#print(a[0:])
+		#print(a[:4])
+		#print(a[:])
+		#print(a.upper())
+		#print(a.lower())
+		#a='Vivek'
+		#b=a.replace("Vivek","Gupta")
+		#print(b)
+		#a='Vivek' + '10'
+		#a='Vivek' * 10 	(Vivek multiple by 10).
+		#print(a [1:20:2])	It'll print the 1 to 20 characters with only second characters.
+		#output=a[0].upper()+a[1:-1]+a[-1].upper()
+
+	=> List[] (collection) (Hatrogenous) 
+	List also follow the order.
+	In the list data type duplicate is allowed.
+	We can use multi data in the list and also we can use number of variable like data type.
+		#a=[]			=	We can make list value empty.
+		#a=['Vivek','Gupta',20,1.5,True,(20+10j)]
+		#print(type(a))
+		#print(a)
+		#print(a[0])
+		#print(a[1:2])
+		#a.append('VIVEK')
+		#a.remove('VIVEK')
+		#a[2]='VIVEK'		=	To replace by using index values.
+		
+
+	=> Tuple()
+	List and Tuple data type both are same just they have one diffenece list we can edit and read, But in tuple data type we can just read the values.
+	We can overwrite the values using same variable.
+		#a=(100,300,'Vivek','Gupta')
+		#print(type(a))
+		#print(a)
+		#print(a[1])
+		#print(a[1:2])
+		#a=(100)		=	Type will show the int.
+		#a=(100,)		=	Now It'll show tuple type.
+		
+
+	=> Set {}
+	append means It'll append the data is the last like order wise.
+	add means It can add the data any where of the file or line.
+	It is similar to list and tuple data type and set doesn't support duplicate, order, Indexing method, slice opertor, replacing because of indexing.
+	We use set data type to just keep the data.
+
+		#a={}			=	If we make empty set data It'll be dict data type. If you want set empty data then
+		#a=set()		=	To make set empty data.	
+		#a={10,20,'Vivek','Gupta'}
+		#print(a)
+		#print(type(a))
+		#a.add(100)
+		#a.remove(100)
+
+	=> Frozenset
+	It is similar to the set just there is one differnce that is not changes like add , remove, replace.
+
+		#a=frozenset ({10,20,30,'Vivek'})
+		#print(a)
+		#print(type(a))	
+
+
+
+	=> Dict (key:values) 
+	It's not follow the order and also indexing and slice not work also not support duplicate.
+	We can store the values in key pairs and we can add the values and replace.
+
+		#a={}			=	To empty dict data type.
+		#a={'Name':'Vivek', 'Account':12345}
+		#print(a)
+		#a['Last Name']='Vivek'	=	Add the key and values.
+		#del a['Last Name']	=	To delete the key auto pairs will delete.
+		#a['Name']'='Prabhu'	=	To replace the values.
+
+				
+	=> Range
+	We are providing the range the in number values.
+	We cannot be chnage if once values has been defined so na add remove or replace.
+		#a=range(10)
+		#print(a)
+		#for x in a:
+		#print(x)
+		#a=range(3,10)
+		#print(a[0])
+		#print(a[1:3]
+		#r=a[2:4]
+		#a=range(1,20,2)	=	2 will substract from each one.
+		#a=range(20.1,3)
+		#a=range(20,3,-3)
+
+	=> Bytes Data Type
+	To manipulate the binary values.
+	We cannot make chnages in the bytes data type.
+		#a=bytes([10,20,20])
+		#print(a[2])
+		#for x in a;
+		#print(x)
+
+	=> Bytes Array
+	0-255 range bytes.
+	Bytes and Bytes Array are similer but in bytes array data type we can do the chnages.
+		#a=[20,20,40,50]
+		#print(a)
+		#b=bytearray(a)
+		#print(b)
+		#print(type(b))
+
+
+	=> None Data Type
+	We are just reserving the variable to use when the need that type of variable.
+		#a=None
+		#id(a)
+		#type(a)
+		#print(type(a))
+		
+		#def Vivek():
+		#Print("Welcome")
+		#abc=Vivek
+		#print(type(abc))
+	
+	=> Python base Conversion (Type casting)
+	We no need to convert the binary, octal, Hexadecimal because number is already in decimal, but decimal can convert in the binary, octal, hexadecimal.
+		#bin(10)
+		#bin(23)
+		#bin(23ab)
+		#bin(0X23)
+
+	
+	=> Type Conversion Function
+
+	- int()
+	- float()
+	- bool()
+	- complex()
+	- str()
+
+	For int:-
+		Complex cannot covert in int.
+		Str can covert only base 0-9 number only.
+		#int(100.5)
+		#int(True)
+		#int('100')
+			
+	For float:-
+		Complex number cannot convert in float.
+		Str can covert only base 0-9 number only.
+		
+		#float(100)
+		#float(0B10)
+		#float(0O0128)
+		#float(0X12ab)
+		#float(True)		
+
+	For complex:-
+		
+		#complex(100)
+		#complex(0B10)
+		#complex(0O0128)
+		#complex(0X12ab)
+		#complex(100.5)
+		#compex(True)
+		#complex('100')
+
+	For bool:-
+
+		#bool(000)
+		#bool(0B00)
+		#bool(0O000)
+		#bool(0X000)
+		#bool(000.0)
+		#bool(00+0j)
+		#bool('100')
+		#bool('ABC')
+		
+
+	For str:-
+		If any values or word using '' then It's will become string.
+		#str(1000)
+		#str(0B00)
+		#str(0O000)
+		#str(0X000)
+		#str(000.0)
+		#str(00+0j)
+		#str(True)
+		#str(False)
+
+
+	=> Python data type Mutable, Immutable & Reusability.
+		#id(a)	
+
+	Mutable:-
+	The id will be same after changes.
+		list
+		set
+		dict
+		bytearray
+
+	Imutable:- (Resuability)
+	The id will be not same after changes.
+		int
+		float
+		bool
+		complex
+		str
+		tuple
+		frozenset
+		range
+		bytes
+
+
+	=> Python Escape Character
+	WE can escape the natural dupty while using \"Vivek\".
+		
+
+	\'
+		#print("I am the \'Vivek'\")
+	\"
+		#print("I am the \"Vivek\"")
+	\
+		#print("I \
+			am /
+			Vivek")
+	\\
+		#print(" I am Vivek \\")				= After or before special character we have to use to print\.
+	\n
+		#print("
+	\t
+		#print("I \tam \tVivek".expandtabs(tabsize=4))		= To define the tab size.
+		#print("I \tam \tVivek")				= To provide the tab (default 8 digit tab)
+	\r
+		#print("I am Vivek \rYou are Devil")			= To replace the work or line.
+	\b
+		#print("I am \bVivek")					= To use one backspace.
+	\octcal value
+		#print('\o12\o45\o67')
+	\hexadecimal
+		#print('\x48\x45\ab')
+
+
+	=> Python Comments
+	We can discribe the code while using the comments method.
+	
+	#Discribing my Name
+	#""" Discribing
+		my Name """
+	#print("I am Vivek")
+
+	
+
+	=> Python indentifiers
+	
+	Indentifiers is nothing but its just variable function can indentifi easy
+	Front character of variable or indentifer a-z, A- Z, _ These are only allow except this nothing is allow in indentifier including specical characters.
+	
+
+
+	=> Python operators (06)
+
+	- Arithmetic Operator's
+		+:-
+			#10+4 = 14
+		-:-
+			#10-4 = 6
+		*:-
+			#10*2 = 20
+		/(float Division):-
+			#10/2 = 5.0
+		%(Modulo Devision:-
+			#10%4 = 2
+		//(Floor Devision):-
+			#10//4 = 2
+			#-10//4 = 3
+		**(Power):-
+			#1**3 = 1000
+
+
+	- Relational/Comparsion Operator's
+		#ord(a)
+		(>,<,>=,<=,=(a=10(assign the values)),==,!=)
+
+	- Identity Opeator /class/type/object
+		is
+		is not
+		print(type(x) is type(y))
+		print(type(x)is not type(y))
+
+	- Membership Operator
+		in
+		not in
+		print(90 in z)
+		print(90 not in x)
+
+	- Logical Opertor's
+		(and,or,not)
+	
+	-Boolean_;
+		True and True = True
+		False and True = False
+		True and False = False
+		False and False = False
+		Non-Boolean
+		None = False
+		0 = False
+		0.0 = False
+		"" = False
+		Not True
+		Not True = False
+		Not False = True
+
+	- Assignment Operator's
+		#a=b=c=10
+		#a,b,c=10,20,30
+		#a=10
+		#a=a+5	=	Id won't changes.
+			
+	- Identity Operator's
+
+		Refer the identifiers
+	- Membership Operator's
+
+		Searching the values on defined variables values.
+		#a='Vivek'
+		#Vi in a
+		#Vi not in a
+
+	=> Ternary Opeator's
+		First_Values conditions else Second_Values.
+		#a=100 if b> c else G
+		#print(a)
+
+	=> Many operator use in single time, On google we can find that to which it will give first like BODMAS.
+
+	=> Bitwise Operator's
+	- & (AND)
+	- | (OR)
+	- ^ (NOT)
+	- << (Left Shift)
+	- >> (Right Shift)
+
+	
+	=> Print Function
+		#print("I am Vivek")	=	Next line if don't have values then it's comes blank because of ("I am Vivek",end='\n'), To remove ("I am Vivek",end=''), ("I am Vivek",end='Finish').
+		#("I am Vivek",sep='\n',end='')
+		
+		#a=10
+		 b=100
+		 c="Vivek"
+		#print(b,"Is an Interger Values",c,"Is a Sreing Values")
+		#print("{0} Is an Interger Values {1} Is a Sreing Values" .format(a,c))
+		#print()	=	We can use 	 extra space.
+
+		#print(a);print(b);print(c)	=	We can use multiple program by using ;.
+		#Name,Address,Age='Vivek','Mumbai',24
+		#print(Name,Address,Age)
+
+
+
+	=> Input Function
+	
+	We will ask the data from the user this process is also called taking input from the users.
+		#Name=str(input("Enter your name:- "))
+		 Address=str(input("Enter your address:- "))
+		 Age=int(input(Enter your age:- "))
+		#print(Name,Address,Age)
+		#Total=int(a)+int(b)
+		
+
+
+	=> Indentation and Margin  4space or tab
+
+@type test.py
+	=> Python Conditional Statement
+
+	- if Statement
+
+		import os
+		t_w=os.get_terminal_size().columns
+		given_string=input("Enter your string:")
+		print(given_string)
+		user_cnf=input("Do you want to allign test: say yes or no")
+		if user_cnf == "yes":
+			print(given_string.center(t_w).title())
+			print(given_string.ljust(t_w).title())
+			print(given_string.rjust(t_w).title())
+
+#Condition is set of expression.
+
+		#if condition: or if (condition):
+			statement-1
+			statement-2
+			statement-3
+			statement-4
+
+		#a=10
+		 b=5
+		 if a > b:	= If condition not ture then It'll not print any print.
+		 	print("A Greater than B")
+		 	print("A Greater then B")
+		 	print("A Greater then B")
+
+		#a=int(input("Enter Number a:- ")
+		 b=int(input("Enetr Number b:- ")
+		 if a+b:
+			print("Sum of a and b ==",a+b)
+			print("value of a",a)
+			print("Value of b",b)
+
+
+		#if Name:='Vivek':
+		#if 'P' in 'Prabhu':
+		#if 'xxx' in ['laptop','desktop']:
+				
+
+	- if-else
+		#if condition: or if (condition):
+			statement-1
+		 else:
+			statement-2
+			statement-3
+			statement-4
+
+
+		#age=int(input("Enter you age:- "))
+		 print()
+		 if age >= 18:
+			print("You are eligible for vote")
+		 else:
+			print("You are not eligible for vote")
+
+		#a=eval(input("Number:_"))
+			eval = Manage my number of string.
+
+		#print()
+		 num=int(input("Enter your Number:- "))
+		 print()
+		 if num >=1 and num<= 100:
+        		print("Your Number is ",num, "It is between 1 and 100")
+		 else:
+        		print("Your Number is ",num, "It is not between 1 and 100")
+		 print()
+
+		#import os
+		 shutdown = input("DO you wish to shutdown your Computer ? Yes/No: ")
+		 if shutdown == "No":
+			exit()
+		 else:
+			os.system("shutdown now 1")
+		
+
+
+	-if-elif-else
+		
+		#if condition: or if (condition):
+			statement-1
+			statement-2
+		 elif condition :
+			statement-1
+			statement-2
+		 elif condition :
+			statement-1
+			statement-2
+		 else:
+			statement-1
+			statement-2
+		statement-4
+
+
+		#varname=eval(input("Enter the value: "))
+		 if (type(varname) == int ):
+			print("Type of varibale is Integer")
+		 elif (type(varname) == float):
+			print("Type of variable is Float")
+		 elif (type(varname) == complex):
+			print("Type of variable is Complex")
+		 elif (type(varname) == bool):
+			print("Type of variable is bool")
+		 elif (type(varname) == string):
+			print("Type of variable is string")
+		 elif (type(varname) == tuple):
+			print("Type of variable is Tuple")
+		 elif (type(varname) == Dict):
+			print("Type of variable is Dictionaries")
+		 elif (type(varname) == list):
+			print("Type of variable is List")
+		 else:
+			print("Type of variable is unknow")
+
+
+
+
+	=> Nested if
+		When we are want to match number of condition ture.
+		
+		#a=10
+		 b=20
+		 c=30
+		 if a==10:
+			if b==20
+				if c==30
+					print("Value of A",a)
+				else:
+					print("Your Third condition is wrong")
+			else:
+				print("Your Second condition is wrong")
+		else:
+			print("Your First condition is wrong")
+
+	
+	=> Modules of Python
+		A module if file containing python defination and statement. That's means, module containing python function, classes and variables.
+		We can use another script file as a module. (both script should me same location)
+		To check all default modules
+			#help("moodules")
+			#help(math)
+			#dir(math)
+				math.pow(2,3) 2 power 3 () = means a function it's always need input.
+		pi id constent value it's means it's a variable.
+		#pip3 help to download third party modules.
+			#/python37/script/pip install lxml/xlwt
+			#python3 -m pip install lxml
+				from lxml import etree
+			#python3 -m pip install --upgrade pip
+
+			If you are import math then no need to use  - 	import math *			To import all
+			print(math.pi) you can use print(pi)
+			import math as m	m work as alias
+			from math import pi		To import pi only form math.
+			from math import *
+			import platform as pt
+			from math import ip,pow
+			print(pt.system())		To know the you os.
+
+
+		vi module.py
+			value=123456
+		vi test.py
+			import module
+			print(module.value)
+
+	- Platform module
+		The platform module is used to access the underlying platform's data hardware, operating system and interpreter version information.
+		How to list all functions and variable  of a platform module?
+			There is a build-in function to list all the function names (or varibale names) in a module and that is dir() function.
+			print(dir(platform))
+			From script: print(help(platform))
+			For cli: help(platform)					You will get the document how to use.(ctl+print)
+			print(f"this is your system {platform.system()}")		Operations always write under {}
+			If it's a function then use (), If it's a variable then use () with value.
+	
+	- getpass and getuser module
+		getpass: Prompts the user for passowrd without echoing. The getpass module provide secure way to handle the password prompt where program interact with
+				the user via the terminal.
+		getuser: Functions display the login name of the user. This function check the environment variables LOGNAME, USER, LNAME and USERNAME in order, and 
+				return the value of the first non-empty string. (by default show systemc user)
+
+			vi getpassword.py		File name should not be same as a modules
+				import getpass
+				pass=getpass.getpass(prompt="Enter your password:")
+				print("Your given password is: {pass}")
+
+	- sys module
+		The sys modules is used to work with python runtime environment.
+		The sys module provide function and variable used to manipulate different parts of the Python runtime environment.
+		dir(sys)
+		help(sys)
+			import sys
+			print(sys.platform)
+			print(sys.version_info)
+			print(sys.modules)			To see the list of modules of sys.
+			print(sys.path)				This is the environment variable of python
+			sys.exit()					To stop the python script. and you can provide any code (2) in that, because it's a function.
+	- sys.argv module
+		sys.argv returns a list of command line arguments passed to  a python scripts.
+		command line arguments by default work like string.
+		always consider script file name as first arguments we can bypass by
+			print(sys.argv[1])
+		print(sys.argv)		For command line arguments like as aw 2
+
+		vi sys_argv.py
+			#user_str=input("Enter your string: ")
+			#user_action=input("Enter you action on your string (vaild action are: upper/lower/title): ")
+
+			import sys
+
+			#print("The no of command line arguments: ",len(sys.argv))
+
+			if len(sys.argv) != 3:
+			    print("Usage:")
+			    print(f'{sys.argv[0]} <your_required_string> <lower|upper|title>')
+			    sys.exit()
+
+			user_str=sys.argv[1]
+			user_action=sys.argv[2]
+
+			if user_action == 'lower':
+			    print("Your lower string is: ",user_str.lower())
+			elif user_action == 'upper':
+			    print("Your upper string is: ",user_str.upper())
+			elif user_action == 'title':
+			    print ("Your title string is: ",user_str.title())
+			else:
+			    print("Your option is invaild. Please enter vaild option from list: lower/upper/title")
+
+	- OS module
+		This module used to work/interact with operating system to automate many more task like creating directory, removing directory, identity 
+		current directory and many more.
+		Dividinf OS module in four part for better understanding.
+			os
+				print(os.sep())			= To see what seperater work for files like linux / and window \.
+				print(os.getcwd())		= To see the current working directory.
+				os.chdir("/var/log/")	= To change directory.
+				os.listdir("/var/log/")	= To list the directory.() current location (/var/log/)
+				os.mkdir("/app")		= To make directory for current path.
+				os.makedirs("/app/log")	= To create recursive directory function.
+				os.remove("path")
+				os.removedirs("path")
+				os.rmdir("path")
+				os.rename(src,dest)
+				os.environ
+				os.getuid()
+				os.getgid()
+				os.getpid()
+			os.path
+				Os path is a sub module of os (os.path modules is used to work on paths).
+				os.path.sep
+				os.path.basename(path)		= It'll show the last file name.
+				os.path.dirname(path)		= It'll show the directory path.
+				os.path.join(path1,path2)	= To join to path.
+					print(path1+'/'+path2)
+				vi test.py
+					import os
+					path="/root/test.py"
+					print(os.path.basename(path))
+					print(os.path.dirname(path))
+				os.path.split(path)			= Is used to split the path name into a pair head and tail. (/root/ = head, test.py = tail).
+				os.path.getsize(path)		= Get the path size in bytes.
+				os.path.exists(path)
+					if os.path.exist(path):
+						print("Your path is there").
+					else:
+						print(f" {path} is not present")
+				os.path.isfile(path)		= If file exist then output will be true else false.
+				os.apth.isdir(path)			= If dir exist then output will be true else false.
+				os.path.islink(path)		= If soft link exist then output will be true else false.
+				os.path.getatime(path)
+				os.path.getctime(path)
+				os.path.getmtime(path)
+			os.system() from os module (command is always string)
+				os.systemc(ls)				= Same time you will get code in last 0 means success, none 0 means worng command.
+				os.system(pwd)
+				os.system("ls -lrth")
+				os.system("w")
+				os.system("date")
+				pwd=os.system("pwd")		= To store the output of command in variable.
+					if pwd == 0:
+						print("Your command is success executed")
+					else:
+						print("Your command is failed")
+			Practices with platform and os modules.
+				write a single python script to clear terminal of any Operating system
+					improt os
+					os.system("clear")
+					os.system("cls")
+				Write platform independent script to clear terminal.
+					import os
+					import platform
+					if platform.system()=="Windows":
+						os.system("cls")
+					else:
+						os.system("clear")
+			os.walk (Same work as find command of linux.)
+				os.walk used to generate directory and file names in a directory tree by walking.
+				walk always generate a list first as consist of tuple. [] = path you given,  [] =(ls) list of directory, [] =(ls) list of files
+				import os
+				path="/root/test.txt"
+				print(os.walk(path))				= (<generator object walk at 0x7f0aa9513258>)
+				print(list(os.walk(path)))
+					>>> print(list(os.walk(path)))
+					[('/var/log/', ['private', 'samba', 'sssd', 'tuned', 'audit', 'chrony', 'anaconda', 'nginx', 'grafana', 'mysql'], ['wtmp', 'lastlog', 'firewalld', 
+					'kdump.log' , 'dnf.log', 'dnf.librepo.log', 'dnf.rpm.log', 'mysqld.log', 'hawkey.log-20240904', 'btmp-20241002', 'btmp', 
+					'hawkey.log-20241002', 'app_elk.log', 'hawkey.log-20241015', 'fluentbit.log', 'hawkey.log-20241020', 'hawkey.log']), 
+					('/var/log/tuned', [], ['tuned.log']), ('/var/log/anaconda', [], ['anaconda.log', 'syslog' , 'X.log', 'program.log', 
+					'packaging.log', 'storage.log', 'lvm.log', 'dnf.librepo.log', 'hawkey.log', 'dbus.log', 'ks-script-05ypbssd.log', 'ks-script-619hpxz9.log', 
+					'ks-script-uvhtl_1m.log', 'journal.log']), ('/var/log/grafana', [], ['grafana.log'])]
+				import os
+				path="/root/test.txt"
+				print("-----------------------------")
+				for each in os.walk(path):
+					print(each)
+			pd=string.ascii_letters/ascii_lowercase/ascii_uppercase				= To avoid the case sensetive.
+				import os
+				'''
+				path="/var/log"
+				print("--------")
+				for each in os.walk(path):
+				    print(each)
+
+				print("**************")
+				#r = possiblity path, d = directory path, f = file path.
+				for r,d,f in os.walk(path):
+				for r,d,f in os.walk(path,topdown=False):
+				    print(r,d,f)
+				    print(r)
+				    if len(f) !=0:
+				        print(r)
+				        print(f)
+				        for each_file in f:
+				            print(each_file)
+				'''
+				required_file=input("Enter your file: ")
+				for r,d,f in os.walk("/var/log"):
+				    for each_file in f:
+				        if each_file==required_file:
+				            print(os.path.join(r,each_file))
+
+	- Loops
+		Loops is a execute block of code many time.
+			Read a path and check if given path is a file or a directory.
+				import os
+				path=input("Enter you path: ")
+				if os.path.isfile(path):
+				    print(f"Your given path: {path} is file")
+				else:
+				    print(f"Your given path: {path} is directory")
+
+				path=input("Enter your path: ")
+
+				if os.path.exists(path):
+				    print(f"Your given {path} is exists")
+				    if os.path.isfile(path):
+				        print(f"{path} is file")
+				    else:
+				        print(f"{path} is directory")
+				else:
+				    print(f"Your given {path} dosen't exists")
+			---	
+				import os
+				import sys
+
+				path=input("Enter your path: ")
+				if os.path.exists(path):
+				    df_l=os.listdir(path)
+				else:
+				    print("Please provide valid path")
+				    sys.exit()
+
+				p1=os.path.join(path,df_l[0])
+				p2=os.path.join(path,df_l[1])
+
+				if os.path.isfile(p1):
+				    print(f"{p1} is file")
+				else:
+				    print(f"{p1} is directory")
+
+				if os.path.isfile(p2):
+				    print(f"{p2} is file")
+				else:
+				    print(f"{p2} is directory")
+			---
+				import os
+				import sys
+
+				path=input("Enter your path: ")
+				if os.path.exists(path):
+				    df_l=os.listdir(path)
+				else:
+				    print("Please provide valid path")
+				    sys.exit()
+
+
+				for each in df_l:
+				    list_f=os.path.join(path,each)
+				    if os.path.isfile(list_f):
+				        print(f"{each} is a file")
+				    else:
+				        print(f"{each} is a directory")
+		- Working with Loops
+			Loops is a execute block of code many time.
+			String will execute in characters.
+			All programming language need a way to execute block of code many times, this is possible with loops.
+			Python has two types of loops (for loop, while).
+			The for loop in Python is used to iterate over a sequence (list, tuple, string) 
+			my_list=[2,4,3,7,9,5,7]
+			for each in my_list:
+				rem=each%2
+				if rem==0:
+					print(f"{each} is even number")
+				else:
+					print(f"{each} is odd number")
+			---
+			Space is also a character.
+			user_string=input("Enter your string")
+			index=0
+			for each_char in user_string:
+				print(f"{each_char} --> {index}")
+				index=index+1
+		- Working with file extension-.py/.sh/.log/.txt/.csv etc..
+			#!/usr/local/bin/python3
+			import os
+			req_path=input("Enter your directory path: ")
+			#req_extension=input("Enter your file extension: ")
+
+			if os.path.isfile(req_path):
+			    print(f"The given path is {req_path} is file. Please pass only directory path")
+			else:
+			    all_f_ds=os.listdir(req_path)
+			    if len(all_f_ds)==0:
+			        print(f"The given path is {req_path} an empty path")
+			    else:
+			        req_ex=input("Enter you extension: ")
+			        req_files=[]
+			        for each_f in all_f_ds:
+			            if each_f.endswith(req_ex):
+			                req_files.append(each_f)
+			        if len(req_files)==0:
+			            print(f"There are no extension file {req_ex} on given path {req_path}")
+			        else:
+			            print(f"There are {len(req_files)} files in the location of {req_path} with an extension {req_ex}")
+			            print(f"The files are : {req_files}")
+		- Working with range ()
+			Built-in-function
+			Generates intergers as a list
+			Starting with 0.
+			By default range is 0.
+			Rnage are take 3 arguments start, stop, step
+				range(start, stop, step)
+				Step 1 means 0-2 It'll start will 0 and jump 2 number(1&2,2&3) form 1,2,3,4 then it's comes 2,4,6,8. 
+			print(range(5))
+			print(list(range(5)))
+			print(list(range(10,2,-1)))
+			print(list(range(-10,-3,-2)))
+
+			mylist=[1,2,3,4,"python"]
+			print(list(range(len(mylist))))
+
+			for each_index in range(len(mylist)):
+				print(f"'Index-->{each_index}: --> value-->{mylist[each_index]}")
+
+			my_string="Hello"
+			for each in range(10):
+				print(each)
+			
+		- Working with string, tuple and list.
+			my_string="working with loop"
+			print(my_string)
+
+			print(" ".join(my_string))
+
+			print("\n".join(mystring))
+
+			for each_char in my_string:
+				print(each_char)
+
+			my_list=[1,2,3,4,5]
+			for each_value in my_list:
+				print(each_value)
+
+			my_list1=[(1,2),(4,5),(7,8)]
+			for each_list1 in my_list1:
+				print(each_list1)
+			for f,s in my_list1:
+				print(f)		#first value
+				print(s)		#second value
+				print(f,s)
+
+			my_dic={'a':1, 'b':2, 'c':3}
+			for each_value in my_dic:
+				print(each_value)
+			for each_value in my_dic.keys():
+				print(each_value)
+			for each_value in my_dic.values():
+				print(each_value)
+			for each_value in my_dic.items():
+				print(each_value)
+			for key,value in my_dic.items():
+				print(key)
+				print(value)
+				print(key,value)
+
+		- Working with while loop.
+			The while loop in python is used to iterate a over block of code as long as the text expression (condition) is true.
+			We generally use this loop when we don't know beforehand, the number of times of iterate.
+			Use for life like monitoring.
+			my_string="Hello Man!"
+			while True:
+				print(my_string)
+			
+			import time
+			while True:
+				print("Alerts"):
+				time.sleep(1)		#second
+
+			value=4
+			while True:
+				print("Hello Man!")
+				value=value+12
+			while value>=1234:
+				print("Hello Man!")
+				value=value+1
+			
+		- Working with loop control statements.
+			range()
+			for each in [1,2,3,4]:
+				print(before_break)
+				if each==3:
+				break
+			print("after_break)
+
+			for each in [1,2,3,4,5]:
+				if each==2:
+					continue
+					print(each)
+			print("Hello Man!")
+
+			if each==5:
+				pass		#To avoid te error.
+
+	=> Datetime Module
+		Python build-in or default module and used to work with dates and times.
+		Visit strftime.org
+		import datetime
+		import pytx			#python time zone
+		print(datetime.datetime.today())
+		print(datetime.datetime.now())
+		print(datetime.datetime.now().day)
+		print(datetime.datetime.now().month)
+		print(datetime.datetime.now().hour)
+		print(datetime.datetime.now().year)
+		print(datetime.datetime.now().minute)
+		print(datetime.datetime.now().second)
+		print(datetime.datetime.now().strftime("%y-%m-%d"))
+		print(datetime.datetime.now().strftime("%Y-%m-%d"))
+		print(datetime.datetime.now().fromtimestamp(15555555))
+		
+		from datetime import datetime
+		print(datetime.now())
+
+		ist=pytz.timezone('Asia/Kolkata')
+		print(datetime.datetime.now(ist))
+
+		- Delete more than 3 day old file.
+			import os
+			import sys
+			import datetime
+			req_path=input("Enter your path: ")
+			age=3
+			if not os.path.exists(req_path):
+			   print("Please provide valid path ")
+			   sys.exit(1)
+			if os.path.isfile(req_path):
+			   print("Please provide directory path ")
+			   sys.exit(2)
+			today=datetime.datetime.now()
+			for each_file in os.listdir(req_path):
+			   each_file_path=os.path.join(req_path,each_file)
+			   if os.path.isfile(each_file_path):
+			      file_cre_date=datetime.datetime.fromtimestamp(os.path.getctime(each_file_path))
+			      #print(dir(today-file_cre_date))
+			      dif_days=(today-file_cre_date).days
+			      if dif_days > age:
+			         print(each_file_path,dif_days)
+			         os.remove(each_file_path)
+
+	=> Subprocess Module
+		Used to execute Operating System commands
+		Subprocess use to execute the command and store the output in a variable.
+		out=os.system("ls -lrth")		#Just store the success and failer of command in out(0 and 1).
+		import Subprocess
+		To store the output in variable syntax.
+			sp=subprocess.Popen(cmd,shell=True/False,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
+			rc=sp.wait()	#wait to store the command output.
+			out,err=sp.communicate()
+		print(out)
+		print(err)
+
+		cmd='ls -lrth'
+		shell=True		#Run the command as it is given.
+		shell=False
+			cmd=['ls','lrth']
+
+		import subprocess
+
+		cmd="ls -lrth"
+		sp=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
+		rc=sp.wait()
+		out,err=sp.communicate()
+
+		print(f"The return code: {rc}")
+		print("--------------")
+		print(f"The output is: {out}")   #To get output in single line {out.splitlines()}  output as list
+		print("-------------")
+		print(f"The error is: {err}")
+
+		import subprocess
+		cmd=["bash","--version"]
+		sp=subprocess.Popen(cmd,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
+		rc=sp.wait()
+		o,e=sp.communicate()
+
+		if rc==0:
+		   for each_line in o.splitlines():
+		      if "version" in each_line  and "release" in each_line:
+		         print(each_line.split()[3].split('(')[0])
+		else:
+		   print("Command was failed and error is: ",e)
+
+		import subprocess
+		cmd="java -version"
+		sp=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
+		rc=sp.wait()
+		o,e=sp.communicate()
+		if rc==0:
+		    if bool(o)==True:
+		        print(o)
+		    #print(bool(o),bool(e))
+		    '''
+		    if bool(o)==False and bool(e)==True:
+		        print(e.splitlines()[0].split()[2].strip("\""))
+		    '''
+		    if bool(o)==False:
+		        if bool(e)==True:
+		            print(e.splitlines()[0].split()[2].strip("\""))
+		else:
+		    print(e)
+
+	=> Working with file.
+		There are three mode to open file.
+			r		#Read
+			w		#Write
+			a		#append
+		fo=open('file_name','r')
+
+		'''
+		fo=open('newdemo.txt','w')
+		#print(fo.mode)
+		#print(fo.readable())
+		#print(fo.writable())
+		fo.close()
+		'''
+		'''
+		my_content=["This is a data -1\n","This is a data-2\n","This is a data-3"]
+		fo=open("random.txt",'w')
+		fo.write("This is a first line\n")
+		fo.write("This is a second line\n")
+		fo.write("This is a third line")
+		#fo.writelines(my_content)
+		fo.close()
+		'''
+		'''
+		my_content=['This is using loop-iteratioin-1','This is using loop-iterantion-2','This is using loop-iteratioin-3']
+		
+		fo=open("with_loop.txt",'a')
+		
+		for each_line in my_content:
+			fo.write(each_line+"\n")
+		fo.close()
+		'''
+		'''
+		
+		fo=open("with_loop.txt","r")
+		data=fo.read()
+		fo.close()
+		
+		print(data)
+		'''
+		'''
+		fo=open("with_loop.txt","r")
+		print(fo.readline())
+		print(fo.readline())
+		fo.close()
+		'''
+		
+		fo=open("with_loop.txt","r")
+		data=fo.readlines()
+		fo.close()
+		'''
+		for each in range(3):
+			print(data[each])   #data[0], data[1],data[2]
+		'''
+		print(data[-1])
+
+	- Copy the contents of the file to another file.
+		#sfile="C:\\Users\\Automation\\Desktop\\random.txt"
+		#dfile="C:\\Users\\Automation\\Downloads\\newrandom.txt"
+		sfile=input("Enter your source file: ")
+		dfile=input("Enter your destination file: ")
+		sfo=open(sfile,'r')
+		content=sfo.read()
+		sfo.close()
+
+		dfo=open(dfile,'w')
+		dfo.write(content)
+		dfo.close()
+
+	- Working with csv file.
+		CSV = Comma Seperated values.
+		It's a simple file format used to store tabular data, such as a spreadsheet/excel or database.
+		import csv 
+		req_file="C:\\Users\\Automation\\Desktop\\hi\\new_info.csv"
+
+		fo=open(req_file,"r")
+		content=csv.reader(fo,delimiter="|")
+		for each in content:
+			print(each)
+
+		fo.close()
+
+	- Get header and no of rows in a csv file.
+		import csv 
+		req_file="C:\\Users\\Automation\\Desktop\\hi\\new_info.csv"
+
+		fo=open(req_file,"r")
+		content=csv.reader(fo,delimiter="|")
+		#print(list(content))
+		#print(f'The header is:\n {list(content)[0]}')
+		#header=next(content)
+		#print("The header is: ",header)
+		print("The no of rows are: ",len(list(content))-1)
+		'''
+		for each in content:
+			print(each)
+		'''
+		fo.close()
+
+	- Create csv file
+		import csv
+		#req_file="C:\\Users\\Automation\\Desktop\\hi\\new_info.csv"
+		'''
+		fo=open(req_file,'r')
+		csv_reader=csv.reader(fo,delimiter="|")
+		for each_row in csv_reader:
+			print(each_row)
+		fo.close()
+		'''
+		req_file="C:\\Users\\Automation\\Desktop\\hi\\demo.csv"
+		fo=open(req_file,'w',newline="")
+		csv_writer=csv.writer(fo,delimiter=",")
+		'''
+		csv_writer.writerow(['S_No',"Name",'Age'])
+		csv_writer.writerow([1,"John",23])
+		csv_writer.writerow([2,"Cliton",24])
+		'''
+		my_data=[['S_No',"Name",'Age'],[1,"John",23],[2,"Cliton",24]]
+		csv_writer.writerows(my_data)
+		fo.close()
+
+	- Working with JSON(JavaScript Object Notation)
+		By default open use read.
+		JSON(JavaScript Object Notation) is a popular data format used for representing structured data.
+		It's common to transmit and receive data between a server and web application in JSON format.
+		
+		import json 
+		#Read a json file
+		'''
+		req_file="myjson.json"
+
+		fo=open(req_file,'r')
+		#print(fo.read())
+		print(json.load(fo))
+
+		fo.close()
+		'''
+		#Write data(dictionary data) into a json file
+		my_dict={'Name':'Narendra','skills':['Python','shell','yaml','AWS']}
+
+		req_file="myinfo.json"
+
+		fo=open(req_file,'w')
+		json.dump(my_dict,fo,indent=4)
+
+		fo.close()
+
+	- Working with Exception Handling: (Is nothing but error)
+		We can handle error with help of try and exception block.
+			Syntax
+				try:
+					Statements-1
+					Statements-2
+					Statements-3
+				except:				#except Exception as e:
+					print("Comments")	#print(e)
+		A python program terminates as soon as it encounters an error.
+		Error are two type.
+			Syntax error. (There are no way to handle syntax error)
+			Run Time error (We can handle run time error and syntax correct but exception are wrong.)
+		
+		print("Welcome to exception error")
+		print("Now it's fine.")
+		try:
+			fo=open("vivek.txt")
+			print(fo.read())
+			fo.close()
+		except:
+			print("Something wrong while reading file")
+
+		print("Welcome to exception error")
+		print("Now it's fine.")
+		try:
+			fo=open("vivek.txt")
+			print(fo.read())
+			fo.close()
+		except Exception as e:		#Storing error in e variable.
+			print("e")
+
+		my_list=[3,4,5]
+		try:
+			print(my_list[4])
+		except Exception as e:
+			print(e)
+		
+		print(my_list[4])
+		print("This code will also execetues")
+		try:
+			import fabric				#import module to manage error.
+		except Exception as e:
+			print(e)
+
+		List of the exception error:
+			IndexError
+			ZeroDivisionError
+			ImportError
+			ValueError
+			TypeError
+			NameError
+			FileNotfoundError
+			IOError
+
+		Exception handling for known Exception.
+			NameError
+			#TypeError
+			#FileNotFoundError
+			#ZeroDivisionError
+
+			try:
+				print("This is try block")
+				import fabric
+				print(a)
+				#print(4+"hi")
+				#open('asdfas.txt')
+				#print(5/0)
+
+			except FileNotFoundError:
+				print("File is not present to open it")
+			except NameError:
+				print("Variable is not defined")
+			except TypeError:
+				print("Adding number and string is not possible")
+			except ZeroDivisionError:
+				print("Division with zero is not possible")
+			except ModuleNotFoundError:
+				print("Please install fabric to use it")
+			except Exception as e:
+				print(e)
+			finally:
+				print("Finally this will executes")
+
+		Differnce between try except finally and try except else.
+			try:
+				a=9
+				print(a)
+			except NameError:
+				print("Variable is not defined")
+			except Exception as e:
+				print("Exception occured:",e)
+			else:					#If exception not work then else will execute.
+				print("This will execute if there is no exceptions in try block")
+			finally:				#Optional final comments deliver
+				print("This will executes always")
+	
+		Creating Custom Exception.
+			raise(Used to raise an existing exception).
+			assert(Used to create an AssertionError).
+
+			age=23
+
+			if age>30:
+				print("Valid age")
+			else:
+				raise ValueError("Age is less than 30")
+
+			age=20
+
+			try:
+				assert age>30
+				print("Valid age")
+			except AssertionError:
+				print("Raised with assert because age is lessthan 30")
+			except:
+				print("Exception occured")
+
+=> Working with functions.
+	Functions can use multiple time that's also called Reusability and improve modularity.
+	Type of functions.
+		Built-in function (Function that are built into python).
+		User-Define Function (Function define by user themselves).
+	A function is a block of code for some specific operations.
+	Function code is re-usable.
+	A functions execute only when it is called.
+		import os
+		import time
+		import platform
+		def mycode(cmd1,cmd2):
+			print("Please wait. Cleaning the screen....")
+			time.sleep(2)
+			os.system(cmd1)
+			print("Please wait finding the list of dir and files")
+			time.sleep(2)
+			os.system(cmd2)
+		if platform.system()=="Windows":
+			mycode("cls","dir")
+		else:
+			mycode('clear','ls -lrt')
+
+	- Define function and use defined function.
+		Rules to define function name:
+		Function name should have only a-z,A-Z,0-9, _
+		Function shuold not start with number but can it be start with _
+		Dont include any space.
+		Function must be define befor calling it
+
+			def display():
+				print("Welcome to functions concept")
+				print("Simple way to define your function")
+				return None
+
+			display()
+
+			print(len("hi"))
+			x=40
+			print(id(x))
+
+			x=(5,6)
+			print(len(x))
+
+			print(min(x))
+			print(max(x))
+
+			x="5"
+			print(int(x))
+
+	- Convert given code in terms of Function without changing output.
+			def welcome_msg():
+				print("Welcome to Python Scripting")
+				print("Python is easy to learn")
+				return None
+			def known_concepts():
+				print("Now we are good with bascis")
+				print("We are about to start functions concepts in python")
+				return None
+			def learning_concepts():
+				print("Function are very easy in python")
+				print("Now we are writing simple functions")
+				return None
+			welcome_msg()
+			known_concepts()
+			learning_concepts()
+
+	- Scope of the variables.
+		We can call any function from anyplace.
+		Any varibale define out of the function then it's called a global varibale.
+		Any varibale define under the function that's called local variable.
+		In function Local variables have a higher priority than global variables.
+		def myfunction1():
+			x=60  #This is local variable
+			print("Welcome to functions")
+			print("x value from fun1: ",x)
+			#myfunction2()
+			return None
+		
+		def myfunction2(y):  #Parameter
+			print("Thank you!!")
+			print("x value from fun2: ",y)
+			return None
+		
+		def main():
+			#global x
+			x=10 
+			myfunction1()
+			myfunction2(x)  #Argument
+			return None
+		
+		main()
+	- Simple function with arguments.
+
+		def get_result(value):  #parameters/positional arguments
+			result=value+10
+			print(f'Your result is: {result}')
+			return None
+		def main():
+			#global num
+			num=eval(input("Enter your number: "))
+			get_result(num)  #Arguments
+			return None
+
+		main()
+
+		def get_add(p,q):
+			aresult=p+q
+			print(f'The addition of {p} and {q} is: {aresult}')
+			return None
+		def get_sub(m,n):
+			sresult=m-n
+			print(f'The sub of {m} and {n} is: {sresult}')
+			return None
+
+		def main():
+			a=eval(input("Enter your first num: "))
+			b=eval(input("Enter your second num: "))
+			get_add(a,b)
+			get_sub(a,b)
+			#x=50
+			#get_sub(19,x)
+			return None
+
+		main()
+
+	- Function with arguments and return value.
+
+		def get_addition(a,b):
+			result=a+b
+			#print(f"The addition of {a} and {b} is: {result}")
+			return result
+		def main():
+			a=eval(input("Enter your first number: "))
+			b=eval(input("Enter your second number :"))
+			result=get_addition(a,b)
+			print(f"The addition of {a} and {b} is: {result}")
+			return None
+		main()
+
+		def multiply_num_10(value):
+			#result=value*10
+			#return result
+			return value*10
+
+
+		def main():
+			num=eval(input("Enter your number: "))
+			result=multiply_num_10(num)
+			print("The result is: ",result)
+
+		main()
+
+	- Function with default arguments.
+
+		def display(a=1):
+			print("The value of a is: ",a)
+			return None
+
+		display(4)
+		display(5)
+		display()
+
+		def add_numbers(a,b=0):
+			result=a+b
+			print("The result is: ",result)
+			return None
+		add_numbers(4,5)
+		add_numbers(5)
+		add_numbers(7)
+
+		def working_on_some(user="root"):
+			print(f"working with {user}")
+			return None
+
+		working_on_some("weblogic_admin")
+
+	- Function with keyword-based arguments.
+
+		def display(a,b):
+			print(f'a={a}')
+			return None
+
+		display(3,4)
+		display(a=3,b=4)
+		display(b=4,a=3)
+
+	- Function with variable length arguments.
+
+		def display(a):
+			print(type(a))
+			return None
+		#display()
+		#display(4,5)		#Get error because more no. of arguments.
+
+		def display(*arg):
+			for each in arg:
+				print(type(each))
+			return None
+		#display()
+		#display(4)
+		display(4,5,67)
+		print('-------------')
+		display("hi",4.65)
+
+	- Function with varibale length keyword-based arguments.
+		** (Pass the arguments in form of key and value.)
+		def display(p,**karg):
+			print(p)
+			print(karg)
+			return None
+		#display(4,5)
+		#display(b=5,a=4)
+		#display(a=4,b=5,c=6)
+		display(56,x=5,y="Hi",z=6.7,user="root")
+
+	- Use fucntion of one python script into another python script, Create user define modules and __name__ varibale.
+		script-1
+			def addition(a,b):
+				print(f"The addition of {a} and {b} id: {a+b})
+				return None
+			def sub(a,b):
+				print(f"The substraction os {a} and {b} is: {a-b})
+				return None
+			'''
+			x=7
+			y=10
+			addition=(x,y)
+			sub(x,y)
+			'''
+
+			def main():
+				x=7
+				y=10
+				addition(x,y)
+				sub(x,y)
+				return None
+			
+			if __name__ =="__main__":
+				main()
+
+		script-2
+			import script-1
+			def multi(a,b):
+				print(f"The multi od {a} and {b} is: {a*b})
+				return None
+			x=10
+			y=10
+			script-1.addition(x,y)			#To call addition  function from script-1.
+			script-1.sub(x,y)				#To call sub function from script-1.
+			mutli(x,y)
+
+			def main():
+				x=10
+				y=10
+				script-1.addition(x,y)
+				script-2.addition(x,y)
+				return None
+			id __name__=="__main__":
+				main()
+
+			{ For checking purpose
+				print(__name__)			#output will be __main__
+				__name__ function work when it's execute direct otherwise will give output that name of the script.
+
+				Follow this syntax:
+
+					import sys
+					import time
+					import os
+					import datetime
+
+					def addition():
+						print(f"The addition of {a} and {b} is: {a+_b})
+						return None
+
+					def main():
+						x=6
+						y=7
+						addition(x,y)
+						return None
+					
+					id __name__=="__main__:
+						main()
+
+			}
+
+	- Chnage current working directory in python.
+
+		#!/usr/local/bin/python3
+		import os
+		'''
+		req_path=input("Enter path to change working dir: ")
+		print("The current working dir is: ",os.getcwd())
+		try:
+		  os.chdir(req_path)
+		  print("Now your new working dir is: ",os.getcwd())
+		except FileNotFoundError:
+		  print("Given path is not a valid path. So cant change working directory")
+		except NotADirectoryError:
+		  print("Given path is a file path. So cant change working directory")
+		except PermissionError:
+		  print("Sorry you dont have access for the given path. So cant chagne working directory")
+		except Exception as e:
+		  print(e)
+		'''
+
+		def main():
+		  req_path=input("Enter path to change working dir: ")
+		  print("The current working dir is: ",os.getcwd())
+		  try:
+		    os.chdir(req_path)
+		    print("Now your new working dir is: ",os.getcwd())
+		  except FileNotFoundError:
+		    print("Given path is not a valid path. So cant change working directory")
+		  except NotADirectoryError:
+		    print("Given path is a file path. So cant change working directory")
+		  except PermissionError:
+		    print("Sorry you dont have access for the given path. So cant chagne working directory")
+		  except Exception as e:
+		    print(e)
+		  return None
+
+
+		if __name__=="__main__":
+		   main()
+
+
+=> Working with Regular Expressions (re modules)
+	The regex is a procedure in any language to look for a  specificed pattern in a given text.
+	It is sequence of character, which represent multiple string.
+	pattern is a sequence of characters, which represent multiple string.
+		'i[st]'			--> is, it
+		'python[23]'	--> python2, python3
+		r"Python" or r"Python[23]"
+	import re
+	re have difference operation are:
+		match()
+			re.match(pattern,text)
+		search()
+			re.match(pattern,text)
+		findall()
+			re.match(pattern,text)
+		finditer()
+			re.match(pattern,text)
+		sub()
+		split()
+		compile() ....etc...
+
+	- Rules to create a pattern.
+		a,X,9			#Ordinary character that match themselves.
+		[abc]			#Matchs a or b or c.
+		[a-c]			#Matchs a or b or c.
+		[a-zA-Z0-9]		#Match any letter from (a to z) or (A to Z) or (0 to 9).
+		/w or /w/w/w	#Matchs any any single letter, digit or underscore.
+		/w				#Matchs any character not part of /w.
+		/d or /d/d/d	#Matchs any decimal digit 0-9.
+		.				#Matchs any single character except newline character.
+
+		import re
+		text="This . is a python and it is easy to learn and it is popular one for dev and automation"
+		'''
+		my_pat= 'i[ston]' #is,it,io,in
+		#print(len(re.findall(my_pat,text)))
+		print(re.findall(my_pat,text))
+
+		'''
+
+
+		#my_pat="x[abcdeflmnopq]y" ==> xay,xby.....xqy
+		#      ="x[a-fl-q]y"
+		'''
+		my_pat='\.'
+		print(re.findall(my_pat,text))
+		'''
+		'''
+		text="This is a ip address of my db1 server: 255.255.255.255  2456234512341234"
+
+		my_pat="\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
+		print(re.findall(my_pat,text))
+		'''
+
+
+		'''
+		text="This is python @ 345 _
+		print(re.findall('\w',text))
+		#print(re.findall('.',text))
+		print(re.findall("\W",text))
+		'''
+
+
+		text="456 90 this is about deciaml re98gex"
+		print(re.findall('\d\d',text))
+
+		^				#Start of the string (and start of line in-case multiline string).
+		$				#End of the string (and newline character in-case multiline string).
+		/b				#Empty string at the begining or end of the word.
+		/b				#Empty string not at the begining or end of the word.
+		/t, /n, /r		#Matchs tab, newline and return respectively.
+
+		import re
+		text='isa python l	earn and \n itis easy 	to'
+		#my_pat='^i[ts]'
+		#my_pat="learn$"
+		#my_pat=r"\blearn\b"
+		#my_pat=r"\Blearn\B"
+		my_pat=r"\n"
+		print(re.findall(my_pat,text))
+
+		{2}				#Exactly 2 time.
+		{2,4}			#2,3 or 4 times.
+		+				#One or more.
+		*				#0 or more times.
+		?				#Once or none(lazy).
+
+		import re
+		'''
+		text="This is a pythonnnn and python aaa haaaafd xyzaaaaaaaa"
+		#my_pat=r'\bpython{4}\b'
+		my_pat=r'\bxyza{8}\b'
+		print(re.findall(my_pat,text))
+		'''
+		text="xaz asdfa sdf xaaz xaaaaaaaz xaaaaz  xz"
+		#my_pat=r'\bxa{2,}z\b'
+		#my_pat=r'xa{1,}z'
+		#my_pat=r'xa*z'   
+		my_pat=r'xa?z'
+		print(re.findall(my_pat,text))
+
+	- Regular expression with flags.
+		re.I/re.IGNORECASE			#Makes the regular expression case-sensetive.
+		re.L/re.LOCALE				#The behaviour of some special sequence like /w, /W, /b, /s, and /S will be made dependent on the current locale
+									 i.e the user's language, country also.
+		re.M/re.MULTILINE			#^ and $ will match at the beginning and at the end of the each line and not just at the beginning and end of the string.
+		re.S/re.DOTALL				#The dot "." will matchs every character plus with newline.
+		re.U/re.UNICODE				#Makes /w, /W, /b, /B, /d, /D, /s and /S dependent on unicode character properties.
+		re.X/re.VERBOSE
+
+		import re
+		'''
+		text="this is a string ThIs is a new staring THIS"
+		my_pat=r'this'
+		print(re.findall(my_pat,text,re.I))
+		'''
+		text="""this is a string EnD
+		this is second line enD
+		This is third line end
+		asfasd this end"""
+		#print(text)
+
+		#my_pat=r'^this'
+		my_pat=r'end$'
+
+		print(re.findall(my_pat,text,re.M|re.I))
+
+	- Working with search and match operation of re modules.
+		It look only at the starting of a string for a match.
+			re.match(pattern,string,flags)
+		
+		import re
+		text="""This  is for
+		python2 and there are two major
+		vers python3 and python in future python4"""
+
+		pat=r'\bpython[23]?\b'
+		'''
+		#print(re.findall(pat,text))
+		match_ob=re.search(pat,text)
+		#rint(match_ob)
+		if match_ob:
+			print("match from ur pattern: ",match_ob.group())
+			print('Starting index: ',match_ob.start())
+			print('Ending index: ',match_ob.end()-1)
+			print("Length: ",match_ob.end()-match_ob.start())
+		else:
+			print("No match found")
+		'''
+		text="""PYTHON2 and there are two major
+		vers python3 and python in future python4"""
+
+		pat=r'\bpython[23]?\b'
+		match_ob=re.match(pat,text,re.I)
+		if match_ob:
+			print("match from ur pattern: ",match_ob.group())
+			print('Starting index: ',match_ob.start())
+			print('Ending index: ',match_ob.end()-1)
+			print("Length: ",match_ob.end()-match_ob.start())
+		else:
+			print("No match found")
+
+	- Working with findall and finditer operation of re module.
+		import re
+		my_str="This is python and we are having python2 and python3 version"
+		my_pat=r'\bpython[23]?\b'
+		#print(re.search(my_pat,my_str))
+		#print(len(re.findall(my_pat,my_str)))
+		#print(re.findall(my_pat,my_str))
+
+		for each_ob in re.finditer(my_pat,my_str):
+			print(f'The match is: {each_ob.group()} starting index: {each_ob.start()}, ending index {each_ob.end()-1}')
+
+	- Working with split and sub and subn operation of re module.
+		import re
+		my_str="This is about pythin and python is very easy and we are having python2 and python3 vers."
+		my_part=r"python"
+		print(re.split(my_part,my_str))
+		print(re.split(my_part,my_str,flags=re.I))
+		print(re.split(my_part,my_str,maxsplit=0,flags=re.I))
+		print(re.sub(my_part,'jython", my_str,flags=re.I))
+		print(re.sub(my_part,"jython",my_str,flags=re.I))
+
+	- Compile operation of re module.
+		import re
+		my_str="This is about python. Python is easy to learn  and we have two major versions: python2 and python3 "
+
+		my_pat=r'\bPython[23]?\b'
+
+		#print(re.search(my_pat,my_str))
+		#print(re.findall(my_pat,my_str,flags=re.I))
+		#print(re.split(my_pat,my_str))
+
+
+		pat_ob=re.compile(my_pat,flags=re.I)
+		print(pat_ob)
+		print(pat_ob.search(my_str))
+		print(pat_ob.findall(my_str))
+
+
+		#re.findall(my_pat,my_str)===> re.complie(my_pat).findall(my_str)
+
+=> Working with remote Linux Server from Linux/Windows using paramiko of python.
+	Paramiko module will create a SSH Client and by using this it will connect to remote server and execute commands.
+	We can also transfer file from the remote machine to the local  or vice versa using paramiko.
+	Two ways to connect with remote servers:
+		Using username and password.
+		Using username and cryptographic key.
+	We connect to Linux/Windows <--> Linux/Windows.
+
+	
+
+
